@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaCal</title>
+    <script src="/js/index.js" defer></script>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="shortcut icon" href="/images/images.png" type="image/x-icon">
+</head>
+
+<body>
+    <div id="mensagem"></div>
+    <div class="container-calculator">
+
+        <input type="text" id="visor" disabled />
+        
+        <!-- <table class="tabela-css" id="linha-tabela">
+        </table> -->
+
+        <div class="buttons-container">
+            <button class="number" onclick="inserirValor(7)">7</button>
+            <button class="number" onclick="inserirValor(8)">8</button>
+            <button class="number" onclick="inserirValor(9)">9</button>
+            <button class="operador" id="divisao" onclick="inserirValor('/')">÷</button>
+            <button class="number" onclick="inserirValor(4)">4</button>
+            <button class="number" onclick="inserirValor(5)">5</button>
+            <button class="number" onclick="inserirValor(6)">6</button>
+            <button class="operador" onclick="inserirValor('*')">x</button>
+            <button class="number" onclick="inserirValor(1)">1</button>
+            <button class="number" onclick="inserirValor(2)">2</button>
+            <button class="number" onclick="inserirValor(3)">3</button>
+            <button class="operador" onclick="inserirValor('+')">+</button>
+            <button class="sinal" id="limpar" onclick="limparVisor()">C</button>
+            <button class="number" onclick="inserirValor(0)">0</button>
+            <button id="back" onclick="apagarNum()"><</button>
+            <button class="operador" onclick="inserirValor('-')">-</button>
+            <button class="sinal" id="addPonto" onclick="inserirValor('.')">.</button>
+            <button class="sinal" id="resultado" onclick="calcular()">=</button>
+        </div>
+    </div>
+
+    <div class="container-table">
+
+        <table class="tabela-css " id="linha-tabela">
+        </table>
+
+    </div>
+</body>
+</html>
