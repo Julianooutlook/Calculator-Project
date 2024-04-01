@@ -132,14 +132,14 @@ document.addEventListener("DOMContentLoaded", function () {
             telaTabela.value = expressao;
 
             if (telaTabela.value) {
-                mensagemDiv.textContent = 'Este modo não aceita operações, clique no botão "C"!';
+                mensagemDiv.textContent = 'Este modo não aceita operações;)';
             } else {
                 mensagemDiv.textContent = '';
             }
         }
         mensagemTimeout = setTimeout(function() {
-            mensagemDiv.textContent = '';
-        }, 4000);
+            mensagemDiv.textContent = limparVisor();
+        }, 3000);
     });
 });
 
