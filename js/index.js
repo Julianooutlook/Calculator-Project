@@ -100,10 +100,7 @@ function calcular() {
         listItem.textContent = expressaoResultado;
         atualizarHistorico.appendChild(listItem);
 
-        limparVisor();
-
         document.querySelector('#visor').value = eval(resultado);
-        limparVisor();
     } else {
         alert("Por favor, complete a expressão antes de calcular.");
     }
@@ -135,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
             telaTabela.value = expressao;
 
             if (telaTabela.value) {
-                mensagemDiv.textContent = 'Este modo não aceita operações, clique no botão "C"!'
+                mensagemDiv.textContent = 'Este modo não aceita operações, clique no botão "C"!';
             } else {
                 mensagemDiv.textContent = '';
             }
@@ -145,4 +142,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 4000);
     });
 });
+
 
