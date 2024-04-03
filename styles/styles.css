@@ -56,8 +56,8 @@ input::-webkit-inner-spin-button {
 .buttons-container #resultado {
     grid-column: span 2;
     font-size: 28px;
-    color: #fff;
-    background-color: #6495ED;
+    color: #000080;
+    background-color:#B0C4DE;
     cursor: pointer;
 }
 
@@ -129,31 +129,26 @@ tr:hover {
 }
 
 /* Media Queries  */
-
 /* Estilos para dispositivos móveis */
-@media only screen and (max-width: 480px) {
+@media only screen and (min-width: 370px) and (max-width: 480px) {
 
     .container-calculator {
         margin-left: 0;
     }
-
     .buttons-container {
-        height: 68vh;
+        height: 56vh;
+        width: 100vw;
     }
-
     input {
-        margin-top: 72%;
         height: 14vh;
-
+        width: 100vw;
     }
-
     .container-table {
         left: 12vw;
-        top:1vh;
+        margin-top: 72vh;
     }
     #mensagem {
         position: absolute;
-        top: 36vh;
         margin: 0;
     }
 }
@@ -184,17 +179,6 @@ tr:hover {
         left: 0;
         top: 68vh;
     }
-}
-
-
-/* Estilos para desktops */
-@media only screen and (min-width: 1025px) {
-
-    .container-table {
-        left: 54vw;
-        top: 1vw;
-    }
-
 }
 
 @media only screen and (orientation: landscape) {
