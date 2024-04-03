@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         mensagemTimeout = setTimeout(function() {
             mensagemDiv.textContent = limparVisor();
-        }, 3000);
+        }, 4000);
     });
 });
 
