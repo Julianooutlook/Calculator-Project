@@ -133,8 +133,8 @@ document.addEventListener("DOMContentLoaded", function () {
             let expressaoNova = textoLinha.substring(expressaoSeparada, textoLinha.length);
 
             //let expressaoResult = expressaoNova.trim();
-            //let expressaoFinal = expressaoResult.split("=")[1];
-            telaTabela.value = expressaoNova;
+            let expressaoFinal = expressaoResult.split("=")[1];
+            telaTabela.value = expressaoFinal;
             
         }
         
