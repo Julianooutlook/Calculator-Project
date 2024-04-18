@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             let expressaoSeparada = textoLinha.indexOf("=");
             textoLinha.substring(0, expressaoSeparada);
-            let expressaoNova = textoLinha.substring(expressaoSepaarada, textoLinha.length);
+            let expressaoNova = textoLinha.substring(expressaoSeparada, textoLinha.length);
 
             //let expressaoResult = expressaoNova.trim();
             //let expressaoFinal = expressaoResult.split("=")[1];
