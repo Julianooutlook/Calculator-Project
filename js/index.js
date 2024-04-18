@@ -128,9 +128,9 @@ document.addEventListener("DOMContentLoaded", function () {
             let textoLinha = event.target.textContent.trim();
             let expressao = textoLinha.split("=")[1];
 
-            let expressaoSeparada = textoLinha.indexOf("=");
-            textoLinha.substring(0, expressaoSeparada);
-            let expressaoNova = textoLinha.substring(expressaoSeparada, textoLinha.length);
+            let expressaoSeparada = expressao.indexOf("=");
+            expressao.substring(0, expressaoSeparada);
+            let expressaoNova = expressao.substring(expressaoSeparada, expressao.length);
 
             //let expressaoResult = expressaoNova.trim();
             //let expressaoFinal = expressaoResult.split("=")[1];
