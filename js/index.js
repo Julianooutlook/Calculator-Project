@@ -125,10 +125,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Event listener para separar a data e hora da expressão e devolver para o input 
     table.addEventListener("click", function (event) {
         if (event.target.tagName === "TR") {
-            let textoLinha = event.target.textContent.trim();
+            let textoLinha = event.target.textContent;
             let expressao = textoLinha.split("=")[2];
 
-            let expressaoSeparada = expressao.indexOf("=");
+            let expressaoSeparada = expressao.indexOf(" ");
             expressao.substring(0, expressaoSeparada);
             let expressaoNova = expressao.substring(expressaoSeparada, expressao.length);
 
