@@ -125,16 +125,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // Event listener para separar a data e hora da expressão e devolver para o input 
     table.addEventListener("click", function (event) {
         if (event.target.tagName === "TR") {
-            let textoLinha = event.target.textContent;
+            let textoLinha = event.target.textContent.trim();
             //let expressao = textoLinha.split("-")[2];
 
             let expressaoSeparada = textoLinha.indexOf("=");
             textoLinha.substring(0, expressaoSeparada);
             let expressaoNova = textoLinha.substring(expressaoSepaarada, textoLinha.length);
 
-            let expressaoResult = expressaoNova.trim();
-            let expressaoFinal = expressaoResult.split("=")[1];
-            telaTabela.value = expressaoFinal;
+            //let expressaoResult = expressaoNova.trim();
+            //let expressaoFinal = expressaoResult.split("=")[1];
+            telaTabela.value = expressaoNova;
             
         }
         
