@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
             let textoLinha = event.target.textContent;
             let expressao = textoLinha.split("=")[2];
 
-            let expressaoSeparada = expressao.indexOf(" ");
+            let expressaoSeparada = expressao.indexOf("-");
             expressao.substring(0, expressaoSeparada);
             let expressaoNova = expressao.substring(expressaoSeparada, expressao.length);
 
