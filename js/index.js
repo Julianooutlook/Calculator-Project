@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
     table.addEventListener("click", function (event) {
         if (event.target.tagName === "TR") {
             let textoLinha = event.target.textContent.trim();
-            //let expressao = textoLinha.split("-")[2];
+            let expressao = textoLinha.split("=")[1];
 
             let expressaoSeparada = textoLinha.indexOf("=");
             textoLinha.substring(0, expressaoSeparada);
