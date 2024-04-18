@@ -121,26 +121,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const table = document.querySelector("#linha-tabela");
     const telaTabela = document.querySelector("#visor");
-    const mensagemDiv = document.querySelector("#mensagem");
-    let mensagemTimeout;
     
     // Event listener para separar a data e hora da expressão e devolver para o input 
     table.addEventListener("click", function (event) {
         if (event.target.tagName === "TR") {
-            let textoLinha = event.target.textContent.trim();
-            let expressao = textoLinha.split(" - ")[2];
-            telaTabela.value = expressao;
+            let textoLinha = event.target.textContent;
+            let expressao = textoLinha.split("-")[2];
 
-            if (telaTabela.value) {
-                mensagemDiv.textContent = 'Este modo não aceita operações;)';
-            } else {
-                mensagemDiv.textContent = '';
-            }
+            let expressaoSeparada = expressao.indexOf("=");
+            expressao.substring(0, expressaoSeparada)
+            let expressaoNova = expressao.substring(expressaoSeparada, expressao.length);
+
+            let expressaoResult = expressaoNova.trim();
+            let expressaoFinal = expressaoResult.split("=")[1];
+            telaTabela.value = expressaoFinal;
+            
         }
-        mensagemTimeout = setTimeout(function() {
-            mensagemDiv.textContent = limparVisor();
-        }, 4000);
+        
     });
 });
-
+ 
 
