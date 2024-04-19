@@ -3,7 +3,6 @@ function limparVisor() {
 
     document.querySelector('#visor').value = '';
 }
-
 // APAGAR NUMERO DIGITADO  
 function apagarNum() {
 
@@ -11,7 +10,6 @@ function apagarNum() {
     visor.value = visor.value.slice(0, -1);
 
 }
-
 // FUNÇAO PARA INSERIR VALOR 
 function inserirValor(num) {
 
@@ -58,7 +56,6 @@ function inserirValor(num) {
     }
 
 }
-
 // FUNÇAO PARA CALCULAR 
 function calcular() {
 
@@ -76,6 +73,11 @@ function calcular() {
     if (!contemOperacao) {
         alert("A expressão deve conter uma operação válida.")
         apagarLinha('linha_a_remover');
+        return;
+    }
+
+    if (Math.sign(resultado) === -1) {
+        alert("Por favor, preencha a expressão antes de calcular.")
         return;
     }
 
@@ -121,25 +123,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const table = document.querySelector("#linha-tabela");
     const telaTabela = document.querySelector("#visor");
-    
+    const Regex = /=(.*)/;
+
     // Event listener para separar a data e hora da expressão e devolver para o input 
     table.addEventListener("click", function (event) {
         if (event.target.tagName === "TR") {
             let textoLinha = event.target.textContent;
-            let expressao = textoLinha.split("=")[2];
 
-            let expressaoSeparada = expressao.indexOf("-");
-            expressao.substring(0, expressaoSeparada);
-            let expressaoNova = expressao.substring(expressaoSeparada, expressao.length);
+            let expressaoAlterada = Regex.exec(textoLinha);
+            let valorDpsDoIgual = expressaoAlterada[1].trim();
 
-            //let expressaoResult = expressaoNova.trim();
-            //let expressaoFinal = expressaoResult.split("=")[1];
-            
-            telaTabela.value = expressaoNova;
-            
+            telaTabela.value = valorDpsDoIgual;
+
         }
-        
     });
+
 });
- 
 
