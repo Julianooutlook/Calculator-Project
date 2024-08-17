@@ -1,16 +1,16 @@
-// LIMPAR VISOR 
+
 function limparVisor() {
 
     document.querySelector('#visor').value = '';
 }
-// APAGAR NUMERO DIGITADO  
+ 
 function apagarNum() {
 
     const visor = document.querySelector('#visor');
     visor.value = visor.value.slice(0, -1);
 
 }
-// FUNÇAO PARA INSERIR VALOR 
+
 function inserirValor(num) {
 
     let display = document.querySelector("#visor");
@@ -18,7 +18,7 @@ function inserirValor(num) {
     if (display.value === "" && num === ".") {
         return
     }
-    // Regex para validar entrada 
+
     const regexSinais = new RegExp(/[\+\-\*\.\/]$/);
     const ultimoCaractereSinal = regexSinais.test(display.value);
     const valorDigitadoSinal = regexSinais.test(num);
@@ -30,7 +30,7 @@ function inserirValor(num) {
         else if (display.value.length === 12) return;
         display.value += num;
     }
-    // Validar as operações 
+
     if (!ultimoCaractereSinal || !valorDigitadoSinal) {
         if (display.value == '*') {
             display.value = '';
@@ -56,7 +56,7 @@ function inserirValor(num) {
     }
 
 }
-// FUNÇAO PARA CALCULAR 
+
 function calcular() {
 
     const resultado = document.querySelector('#visor').value.trim();
@@ -83,7 +83,7 @@ function calcular() {
 
     const ultimoCaractere = resultado.charAt(resultado.length - 1);
 
-    // Verifica se a expressão termina com um número
+
     if (!isNaN(ultimoCaractere)) {
 
         let dataHr = new Date();
@@ -107,8 +107,7 @@ function calcular() {
         alert("Por favor, complete a expressão antes de calcular.");
     }
 
-}
-// Apagar expressão incompleta da tabela
+
 function apagarLinha(linhaID) {
     const linha = document.getElementById(linhaID);
     if (linha) {
@@ -118,14 +117,14 @@ function apagarLinha(linhaID) {
     }
         
 }
-// EVENT LISTENER PARA BUSCAR A EXPRESSAO 
+
 document.addEventListener("DOMContentLoaded", function () {
 
     const table = document.querySelector("#linha-tabela");
     const telaTabela = document.querySelector("#visor");
     const Regex = /=(.*)/;
 
-    // Event listener para separar a data e hora da expressão e devolver para o input 
+
     table.addEventListener("click", function (event) {
         if (event.target.tagName === "TR") {
             let textoLinha = event.target.textContent;
