@@ -104,7 +104,7 @@ function calcular() {
 
         document.querySelector('#visor').value = eval(resultado);
     } else {
-        alert("Por favor, complete a expressão antes de calcular.");
+        alert("Por favor, complete a expressão antes de calcular!.");
     }
 
 
