@@ -3,7 +3,7 @@ function limparVisor() {
 
     document.querySelector('#visor').value = '';
 }
- 
+
 function apagarNum() {
 
     const visor = document.querySelector('#visor');
@@ -34,25 +34,25 @@ function inserirValor(num) {
     if (!ultimoCaractereSinal || !valorDigitadoSinal) {
         if (display.value == '*') {
             display.value = '';
-        } 
+        }
     }
 
     if (!ultimoCaractereSinal || !valorDigitadoSinal) {
         if (display.value == '/') {
             display.value = '';
-        } 
+        }
     }
 
     if (!ultimoCaractereSinal || !valorDigitadoSinal) {
         if (display.value == '-') {
             display.value = '';
-        } 
+        }
     }
 
     if (!ultimoCaractereSinal || !valorDigitadoSinal) {
         if (display.value == '+') {
             display.value = '';
-        } 
+        }
     }
 
 }
@@ -68,7 +68,7 @@ function calcular() {
 
     const operadores = ['+', '-', '*', '/'];
     const contemOperacao = operadores.some(op => resultado.includes(op));
-    
+
     // apagar linha na tabela de expressão incompleta 
     if (!contemOperacao) {
         alert("A expressão deve conter uma operação válida.")
@@ -94,7 +94,7 @@ function calcular() {
 
         let listItem = document.createElement('tr');
         let linhaID = 'linha_' + Date.now();
-        
+
         listItem.id = linhaID;
         atualizarHistorico.appendChild(listItem);
 
@@ -108,14 +108,15 @@ function calcular() {
     }
 
 
-function apagarLinha(linhaID) {
-    const linha = document.getElementById(linhaID);
-    if (linha) {
-        linha.remove();
-    } else {
-        console.log('ID da linha não encontrado:', linhaID);
+    function apagarLinha(linhaID) {
+        const linha = document.getElementById(linhaID);
+        if (linha) {
+            linha.remove();
+        } else {
+            console.log('ID da linha não encontrado:', linhaID);
+        }
+
     }
-        
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -138,4 +139,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
-
